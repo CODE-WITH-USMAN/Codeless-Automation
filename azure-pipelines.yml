@@ -3,6 +3,7 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+
 trigger:
 - main
 
@@ -17,3 +18,8 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+# - script: '"C:\Program Files (x86)\Progress\Test Studio\Bin\ArtOfTest.Runner.exe" list="C:\Users\Usman\Documents\Test Studio Projects\spotify\TestLists\spotify page.aiilist" junit'
+
+- task: CmdLine@2
+  inputs:
+    script: '"C:\Program Files (x86)\Progress\Test Studio\Bin\ArtOfTest.Runner.exe" list="C:\Users\Usman\Documents\Test Studio Projects\spotify\TestLists\spotify page.aiilist" junit'
